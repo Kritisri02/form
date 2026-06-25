@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Details</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>Personal Details</h1>
+
+    <input type="hidden" id="recordId" />
+    <input type="text" id="name" placeholder="Name" />
+    <input type="tel" id="number" placeholder="Number" />
+    <input type="email" id="email" placeholder="Email" />
+    <select id="gender">
+      <option value="" disabled selected>Gender</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+    <textarea id="address" placeholder="Address" rows="3"></textarea>
+
+    <div class="file-upload" onclick="document.getElementById('fileInput').click()">
+      <input type="file" id="fileInput" hidden />
+      <span id="fileName">File Uploader (Demo)</span>
+    </div>
+
+    <div class="btn-group">
+      <button onclick="submitRecord()">Submit</button>
+      <button onclick="editRecord()">Edit</button>
+      <button onclick="deleteRecord()">Delete</button>
+    </div>
+
+    <div class="search-row">
+      <input type="text" id="searchInput" placeholder="Enter number to search" />
+      <button onclick="searchRecord()">Search</button>
+    </div>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

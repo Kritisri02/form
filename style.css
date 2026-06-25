@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at top left, #3b1f6b 0%, #1e1b3a 50%, #1a2a3a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Decorative blobs */
+body::before, body::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+body::before {
+  width: 200px; height: 200px;
+  background: #5a2d8a;
+  top: 60px; left: -60px;
+}
+body::after {
+  width: 220px; height: 220px;
+  background: #7a3060;
+  bottom: 80px; right: -40px;
+}
+
+.card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px 50px;
+  width: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  color: #c9a0f5;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 25px;
+  color: #e0d0ff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(200,180,255,0.6);
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: rgba(180,140,255,0.6);
+}
+
+select {
+  appearance: none;
+  cursor: pointer;
+}
+
+select option {
+  background: #2a1f4a;
+  color: #e0d0ff;
+}
+
+textarea {
+  border-radius: 14px;
+  resize: vertical;
+}
+
+.file-upload {
+  border: 2px dashed rgba(200,180,255,0.35);
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+  color: rgba(200,180,255,0.6);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: border-color 0.2s;
+}
+
+.file-upload:hover {
+  border-color: rgba(180,140,255,0.7);
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.btn-group button, .search-row button {
+  padding: 10px 26px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 25px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-group button:hover, .search-row button:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.search-row {
+  display: flex;
+  gap: 10px;
+}
+
+.search-row input {
+  flex: 1;
+}
+
+#message {
+  text-align: center;
+  font-size: 0.88rem;
+  color: #a0e0a0;
+  min-height: 18px;
+}
