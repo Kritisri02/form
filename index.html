@@ -39,24 +39,24 @@
         <span class="err" id="err-address"></span>
       </div>
 
-      <div class="file-upload" onclick="document.getElementById('fileInput').click()">
+      <div class="file-upload" id="fileUploadBtn">
         <input type="file" id="fileInput" hidden accept=".pdf,.doc,.docx,.txt" />
         <span id="fileName">📄 Upload Document</span>
       </div>
       <div id="docPreview" class="doc-preview" style="display:none">
         <span id="docInfo"></span>
-        <button onclick="removeDoc()">✕</button>
+        <button id="removeDocBtn">✕</button>
       </div>
 
       <div class="btn-group">
-        <button onclick="submitRecord()">Submit</button>
-        <button onclick="editRecord()">Edit</button>
-        <button onclick="deleteRecord()">Delete</button>
+        <button id="submitBtn">Submit</button>
+        <button id="editBtn">Edit</button>
+        <button id="deleteBtn">Delete</button>
       </div>
 
       <div class="search-row">
         <input type="text" id="searchInput" placeholder="Enter number to search" />
-        <button onclick="searchRecord()">Search</button>
+        <button id="searchBtn">Search</button>
       </div>
 
       <p id="message"></p>
